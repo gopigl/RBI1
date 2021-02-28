@@ -15,12 +15,6 @@ node{
         }
     }
    
-    stage("Quality Gate Status Check"){
-          timeout(time: 1, unit: 'HOURS') {
-              def qg = waitForQualityGate()
-            
-          }
-    }
   
    stage('Deploy to Tomcat'){
       
