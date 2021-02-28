@@ -1,6 +1,6 @@
 node{
    stage('SCM Checkout'){
-     git 'https://github.com/gopigl/RBL1'
+     git 'https://github.com/gopigl/RBI1'
    }
    stage('Compile-Package'){
       // Get maven home path
