@@ -18,11 +18,7 @@ node{
           sh "${mvnHome}/bin/mvn sonar:sonar"
         }
     }
-#   stage("Quality gate") {
-#            steps {
-#                waitForQualityGate abortPipeline: true
-#            }
-#   }
+
    
    stage("Quality Gate"){
     timeout(time: 1, unit: 'HOURS') { // Just in case something goes wrong, pipeline will be killed after a timeout
