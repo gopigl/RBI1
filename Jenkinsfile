@@ -18,6 +18,11 @@ node{
           sh "${mvnHome}/bin/mvn sonar:sonar"
         }
     }
+   stage("Quality gate") {
+            steps {
+                waitForQualityGate abortPipeline: true
+            }
+   }
    
   
    stage('Deploy to Tomcat'){
